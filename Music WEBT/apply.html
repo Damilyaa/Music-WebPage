@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music club Webpage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg custom-navbar navbar-dark py-4">
+            <div class="container">
+                <a class="navbar-brand" href="music.html">
+                    <img src="images/logo.png" width="230px">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false"><span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="music.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="members.html">Members</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="events.html">Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="booking.html">Booking</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="apply.html">Casting</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn custom-btn-outline my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="mt-5 col-12">
+                <div class="instructions-container">
+                    <h2>Audition Process</h2>
+                    <br>
+
+                    <h3>Stage 1: Online Video Submission</h3>
+                    <ul>
+                        <li>In the first stage, we ask you to showcase your musical talents by uploading a video of you
+                            performing a song or demonstrating your playing skills. This can be an individual
+                            performance where
+                            you show us your best abilities, whether you're a vocalist, instrumentalist, or composer.
+                            Make sure
+                            the video is no longer than 5 minutes.</li>
+                        <li>Once we review your video submission, successful candidates will be invited to proceed to
+                            the second
+                            stage.</li>
+                    </ul>
+                    <br>
+                    <h3>Stage 2: Live Audition</h3>
+                    <ul>
+                        <li>If you pass the first stage, you'll be invited to an in-person audition. During this stage,
+                            you will
+                            be required to perform a song of your choice live in front of the AITU Music Club panel.
+                            After your
+                            performance, we will conduct a short interview where we'll ask about your musical
+                            background,
+                            experiences, and motivations for joining our club.</li>
+                        <li>This is your chance to not only impress us with your talent but also show your passion for
+                            music and
+                            how you would contribute to our community.</li>
+                    </ul>
+                    <br>
+                </div>
+            </div>
+
+            <div class="mt-3 col-12">
+                <div class="instructions-container">
+                    <h2>Casting Details</h2> <br>
+                    <ul>
+                        <li><strong>Audition Date:</strong> October 2, 2024</li>
+                        <li><strong>Location:</strong> AITU, C1.1.155 </li>
+                        <li><strong>Open Roles:</strong> Singers, Guitarists, Drummers, Keyboardists, Producers, and
+                            everyone
+                            else! </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-3 col-12">
+                <div class="booking-form-container">
+                    <form id="multiStepForm">
+                        <div class="step" id="step1">
+                            <h2>Step 1: Personal Information</h2>
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" required><br><br>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" required><br><br>
+                            <button type="button" class="next-btn btn btn-outline-light w-100">Next</button>
+                        </div>
+            
+                        <div class="step" id="step2" style="display:none;">
+                            <h2>Step 2: Contact Information</h2>
+                            <label for="phone">Phone:</label>
+                            <input type="tel" id="phone" required><br><br>
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" required></textarea><br><br>
+                            <button type="button" class="back-btn btn btn-outline-light w-100">Back</button>
+                            <button type="button" class="next-btn btn btn-outline-light w-100">Next</button>
+                        </div>
+            
+                        <div class="step" id="step3" style="display:none;">
+                            <h2>Step 3: Choose Instrument</h2>
+                            <label for="instrument">Instrument or Role:</label>
+                            <select id="instrument" name="instrument" required>
+                                <option value="vocals">Vocals</option>
+                                <option value="guitar">Guitar</option>
+                                <option value="drums">Drums</option>
+                                <option value="keyboard">Keyboard</option>
+                                <option value="other">Other</option>
+                            </select><br><br>
+                            <button type="button" class="back-btn btn btn-outline-light w-100">Back</button>
+                            <button type="submit" onclick="notification()" class="btn btn-outline-light w-100">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center">
+        <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSfEgICBQRxxRuGVT1Qk9o3LYXe27y-7Bhrh_jaYXvk_x0mt4A/viewform?embedded=true"
+            width="400" height="1376" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+        
+    <div class="container my-5 text-center text-white">
+        <h1>Subscribe to our newsletter!</h1>
+        <h2>Click on this button!</h2>
+        <button id="openFormBtn">Click me</button>
+    </div>
+    <div id="popupForm" class="modal">
+                <div class="modal-content">
+                    <span id="closeBtn" class="close">&times;</span>
+                    <h2>Do you want to be the first to know when the casting starts?</h2>
+                    <h4>Leave your email so we can send you a reminder!</h4>
+                    <form id="subscriptionForm">
+                        <label class="label1" for="name">Name:</label><br>
+                        <input type="text" id="name" name="name" required><br>
+                        <label class="label1" for="email">Email:</label><br>
+                        <input type="email" id="email" name="email" required><br>
+                        <input type="submit" value="Subscribe">
+                    </form>
+                </div>
+            </div>
+
+            <script src="popupbtn.js"></script>
+    <div class="container text-white custom-questions mb-5">
+
+        <dl>
+            <h1> &nbsp;</h1>
+            <dt>
+                <h2> Frequently Asked Questions </h2>
+            </dt>
+            <dt> Do I need prior experience to audition?</dt>
+            <dd> No, we welcome musicians of all levels, whether you're a beginner or a seasoned artist.</dd>
+            <h1> &nbsp;</h1>
+            <dt> Is it necessary to upload the video?</dt>
+            <dd> Yes, it is necessary for us to know your skills. It is a crucial part of first stage of audition.
+            </dd>
+            <h1> &nbsp; </h1>
+            <dt> Can I audition for more than one role?</dt>
+            <dd> Yes, you can select multiple roles in your form or upload multiple videos to show different skills.
+            </dd>
+        </dl>
+    </div>
+    <footer class="custom-footer text-center py-1">
+        <div class="container">
+            <figure>&hearts;</figure>
+            <p>Made by Damilya & Nazira</p>
+            <figure>&hearts;</figure>
+        </div>
+    </footer>
+</body>
+<script>
+    // Add to events.html page
+function addFilterControls() {
+    const filterHTML = `
+        <div class="filter-controls mb-4">
+            <select id="eventFilter" class="form-control">
+                <option value="all">All Events</option>
+                <option value="upcoming">Upcoming Events</option>
+                <option value="past">Past Events</option>
+            </select>
+        </div>
+    `;
+    
+    document.querySelector('.container').insertAdjacentHTML('afterbegin', filterHTML);
+    
+    // Apply saved filter
+    const savedFilter = localStorage.getItem('eventFilter') || 'all';
+    document.getElementById('eventFilter').value = savedFilter;
+    applyFilter(savedFilter);
+}
+
+function applyFilter(filterValue) {
+    localStorage.setItem('eventFilter', filterValue);
+    
+    const upcomingEvents = document.querySelector('.upcoming-events');
+    const pastEvents = document.querySelector('.past-events');
+    
+    switch(filterValue) {
+        case 'upcoming':
+            upcomingEvents.style.display = 'block';
+            pastEvents.style.display = 'none';
+            break;
+        case 'past':
+            upcomingEvents.style.display = 'none';
+            pastEvents.style.display = 'block';
+            break;
+        default:
+            upcomingEvents.style.display = 'block';
+            pastEvents.style.display = 'block';
+    }
+}
+</script>
+
+</html>

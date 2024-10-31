@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music club Webpage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg custom-navbar navbar-dark py-4">
+            <div class="container">
+                <a class="navbar-brand" href="music.html">
+                    <img src="images/logo.png" width="230px">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false"><span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="music.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="members.html">Members</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="events.html">Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="booking.html">Booking</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="apply.html">Casting</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn custom-btn-outline my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-12 mb-3">
+                <div class="instructions-container">
+
+                    <h1>Instructions for Booking a Music Club Room for Rehearsals</h1>
+                    <h2>&nbsp;</h2>
+                    <h2>Choose a Time:</h2>
+                    <p>- Determine your preferred date and time for the rehearsal. Consider selecting a few alternative
+                        options
+                        in case your first choice is not available.</p>
+                    <h2>&nbsp;</h2>
+                    <h2>Fill Out the Request:</h2>
+                    <p>- Select the desired room from the available options. <br>
+                        - Enter the date and time of the rehearsal. <br>
+                        - Provide details about the group or performer (name, number of participants, contact information).
+                        <br>
+                        - Add any additional comments or special requirements if necessary.</p>
+                    <h2>&nbsp;</h2>
+                    <h2>Confirmation:</h2>
+                    <p>- Review the details you’ve entered and confirm the request. <br>
+                        - After confirmation, you will receive an email with the booking details and further instructions.
+                    </p>
+                    <h2>&nbsp;</h2>
+                    <h2>Arrival at the Club:</h2>
+                    <p>- Arrive at the club 10-15 minutes before your rehearsal time. <br>
+                        - Meet with the administrator or follow the instructions provided for accessing the room.</p>
+                    <h2>&nbsp;</h2>
+                    <h2>After the Rehearsal:</h2>
+                    <p>- Ensure the room is left in good condition. <br>
+                        - Return all equipment to its proper place and turn off any devices.</p>
+                </div>
+            </div>
+        </div>
+     
+        <div class="col-12 mb-3">
+            <div class="booking-form-container">
+                <h2>Booking Form</h2>
+                <form id="bookingForm" onsubmit="return validateForm()">
+                    <div class="form-group">
+                        <label for="performance">Performance:</label>
+                        <input type="text" id="performance" name="performance" required>
+                        <span class="error-message" id="performanceError"></span>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="telegram">Leader's Telegram:</label>
+                        <input type="text" id="telegram" name="telegram" required>
+                        <span class="error-message" id="telegramError"></span>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="instruments">Used instruments:</label>
+                        <input type="text" id="instruments" name="instruments" required>
+                        <span class="error-message" id="instrumentsError"></span>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required></textarea>
+                        <span class="error-message" id="messageError"></span>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="date">Date:</label>
+                        <select id="date" name="date" required>
+                            <option value="monday">Monday</option>
+                            <option value="tuesday">Tuesday</option>
+                            <option value="wednesday">Wednesday</option>
+                            <option value="thursday">Thursday</option>
+                            <option value="friday">Friday</option>
+                            <option value="saturday">Saturday</option>
+                        </select>
+                        <span class="error-message" id="dateError"></span>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="time">Time:</label>
+                        <select id="time" name="time" required>
+                            <option value="11-12">11-12</option>
+                            <option value="12-13">12-13</option>
+                            <option value="13-14">13-14</option>
+                            <option value="14-15">14-15</option>
+                            <option value="15-16">15-16</option>
+                            <option value="16-17">16-17</option>
+                            <option value="17-18">17-18</option>
+                            <option value="18-19">18-19</option>
+                        </select>
+                        <span class="error-message" id="timeError"></span>
+                    </div>
+            
+                    <button type="submit" class="btn btn-outline-light w-100">Submit</button>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+    <script src="web4.js"></script>
+    <footer class="custom-footer text-center py-1">
+        <div class="container">
+            <figure>&hearts;</figure>
+            <p>Made by Damilya & Nazira</p>
+            <figure>&hearts;</figure>
+        </div>
+    </footer>
+</body>
+
+</html>
