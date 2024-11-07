@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music club Webpage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg custom-navbar navbar-dark py-4">
+            <div class="container">
+                <a class="navbar-brand custom-logo" href="music.html">
+                    <img src="images/logo.png" width="230px">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="music.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="members.html">Members</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="events.html">Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="booking.html">Booking</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="apply.html">Casting</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2"  type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn custom-btn-outline my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>        
+    </header>
+    
+    <div class="container my-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6 text-center">
+                <h2 class="text-white">AITU</h2>
+                <h1 class="text-white">MUSIC CLUB</h1>
+                <a href="https://www.instagram.com/aitu_music/" class="btn btn-lg custom-btn-instagram">Our
+                    Instagram</a>
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="images/musicclub.jpg" class="img-fluid rounded">
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-12 text-center">
+                <iframe width="80%" height="500px" src="https://www.youtube.com/embed/cB0HjH-D51A" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="instructions-container text-center">
+        <h2>We are Music Club!</h2>
+        <p>Want to know about us more? Click the button below!</p>
+        <div id="additionalContent" class="hidden">
+        <br>
+
+        <h3>Student Music Club: Your Path to Music and Creativity</h3>
+        <ul>
+            The Student Music Club is a place where music connects people, inspires creativity, and develops talents. 
+                We are happy to welcome students who want to share their passion for music, regardless 
+                of their skill level.
+        </ul>
+        <br>
+        <h3>Our Mission</h3>
+        <ul>
+            Our main goal is to create a friendly and supportive atmosphere for everyone interested in music. 
+            We strive to provide opportunities for developing musical skills, organizing concerts, 
+            and participating in various musical events.
+        </ul>
+        <br>
+        </div>
+        <button id="readMoreBtn">Read More</button>
+    </div>
+</div>
+
+    <div class="changeBtn text-center text-white">
+    
+        <h2>You can change the mode here</h2>
+        <button onclick="changeBackgroundColor()">Change Mode</button>
+    </div>
+
+    <div class="container-date">
+        <div class="greeting-container">
+            <h1 id="greeting"></h1>
+        </div>
+        <h2>Current Date and Time</h2>
+        <div class="date-time-box hidden">
+            <p id="currentDateTime"></p>
+        </div>
+        <button id="toggleDateTimeBtn">Show</button> 
+    </div>
+
+    <div class="container text-white custom-questions mb-5">
+        <div class="accordion"></div>
+        <h2 class="accordion-title">Do I need prior experience to audition?</h2>
+        <div class="accordion-content">
+            <p>No, we welcome musicians of all levels, whether you're a beginner or a seasoned artist.</p>
+        </div>
+        
+        <h2 class="accordion-title">Is it necessary to upload the video?</h2>
+        <div class="accordion-content">
+            <p>Yes, it is necessary for us to know your skills. It is a crucial part of first stage of audition.</p>
+        </div>
+        
+        <h2 class="accordion-title">Can I audition for more than one role?</h2>
+        <div class="accordion-content">
+            <p>Yes, you can select multiple roles in your form or upload multiple videos to show different skills.</p>
+        </div>
+
+    </div>
+    
+
+    <div class="rating-container">
+        <div class="rating">
+            <h1>Rate our service!</h1>
+            <p id="ratingMessage">Select a rating:</p>
+            <div class="stars-container">
+                <span class="stars" data-value="1">★</span>
+                <span class="stars" data-value="2">★</span>
+                <span class="stars" data-value="3">★</span>
+                <span class="stars" data-value="4">★</span>
+                <span class="stars" data-value="5">★</span>
+            </div>
+        </div>
+    </div>
+
+<div id="clubInfo" class="changeBtn text-center text-white">
+</div>
+<div class="text-center">
+<button id="addMemberBtn">Add Member</button>
+</div>
+
+<div class="filter-section text-center text-white">
+    <h2>Set Filters</h2>
+    <label for="filter-type">Filter By:</label>
+    <select id="filter-type" onchange="updateFilterInputPlaceholder()">
+      <option value="name">Name</option>
+      <option value="date">Date</option>
+    </select>
+    
+    <input type="text" id="filter-input" placeholder="Enter name or date">
+    <button onclick="applyFilter()">Apply Filter</button>
+  </div>
+
+    <script src="web4.js"></script>
+
+    <footer class="custom-footer text-center py-1">
+        <div class="container">
+            <figure>&hearts;</figure>
+            <p>Made by Damilya & Nazira</p>
+            <figure>&hearts;</figure>
+        </div>
+    </footer>
+</body>
+
+</html>
